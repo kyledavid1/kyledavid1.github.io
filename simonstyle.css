@@ -1,5 +1,8 @@
-body {
+html, body {
 	background-color: #111;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 h1 {
@@ -9,8 +12,11 @@ h1 {
 p {
 	color: white;
 }
+
 div {
+	border: 2px solid white;
 	display: block;
+	padding: 50px;
 }
 
 #black {
@@ -30,8 +36,8 @@ div {
 	top: 50%;
 	left: 50%;
 	background-color: red;
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	margin-top: -150px;
 	margin-right: -150px;
@@ -42,8 +48,8 @@ div {
 	background-color: blue;
 	top: 50%;
 	left: 50%;
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	margin-bottom: 150px;
 	margin-right: 150px;
@@ -54,11 +60,12 @@ div {
 	background-color: green;
 	top: 50%;
 	left: 50%;
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	margin-top: -150px;
 	margin-left: -150px;
+
 }
 
 #yellow {
@@ -66,8 +73,8 @@ div {
 	background-color: yellow;
 	top: 50%;
 	left: 50%;
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	margin-bottom: -150px;
 	margin-left: -150px;

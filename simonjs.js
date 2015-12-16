@@ -1,12 +1,12 @@
 "use strict";
 
-$(function() {
+$(document).ready(function() {
  console.log("loaded");
 
 
 var simonColor = ["blue", "red", "green", "yellow"];
 
-var colors = $("div").attr("class", "block");
+// var body = $("body").attr("class", "block");
 
 
 var addEventListeners = function() {
@@ -17,4 +17,4 @@ var addEventListeners = function() {
 
 
 
-})();
+});
