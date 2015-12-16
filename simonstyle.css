@@ -1,8 +1,6 @@
-html, body {
+body {
 	background-color: #111;
-	height: 100%;
-	width: 100%;
-	margin: 0 auto;
+	text-align: center;
 }
 
 h1 {
@@ -12,11 +10,12 @@ h1 {
 p {
 	color: white;
 }
-
+/*#main {
+	border: 2pt solid white;
+}*/
 div {
-	border: 2px solid white;
-	display: block;
-	padding: 50px;
+	border: 2pt solid white;
+	text-align: center;
 }
 
 #black {
@@ -25,61 +24,74 @@ div {
 	left: 50%;
 	background-color: black;
 	border-radius: 45%;
-	width: 200px;
-	height: 200px;
-	margin-top: -75px;
-	margin-left: -75px;
+	width: 290px;
+	height: 290px;
+	margin-top: -40pt;
+	margin-left: -40pt;
 }
 
 #red {
 	position: absolute;
+	border-radius: 10%;
 	top: 50%;
 	left: 50%;
 	background-color: red;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	float: left;
 	margin-top: -150px;
 	margin-right: -150px;
-}
-
-#blue {
-	position: absolute;
-	background-color: blue;
-	top: 50%;
-	left: 50%;
-	width: 200px;
-	height: 200px;
-	float: left;
-	margin-bottom: 150px;
-	margin-right: 150px;
+	margin-left: 8.5%;
+	box-shadow: 0 0 100px red;
 }
 
 #green {
 	position: absolute;
 	background-color: green;
+	border-radius: 10%;
 	top: 50%;
 	left: 50%;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	float: left;
 	margin-top: -150px;
 	margin-left: -150px;
-
+	margin-right: 9.5%;
+	margin-bottom: 10%;
+	box-shadow: 0 0 100px green;
 }
 
 #yellow {
 	position: absolute;
 	background-color: yellow;
+	border-radius: 10%;
 	top: 50%;
 	left: 50%;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	float: left;
 	margin-bottom: -150px;
 	margin-left: -150px;
+	margin-right: 20%;
+	margin-top: 8.5%;
+	box-shadow: 0 0 100px yellow;
 }
 
+#blue {
+	position: absolute;
+	border-radius: 10%;
+	float: left;
+	background-color: blue;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 250px;
+	margin-bottom: 150px;
+	margin-right: 150px;
+	margin-left: 8.5%;
+	margin-top: 8.5%;
+	box-shadow: 0 0 100px blue;
+}
 
 
 

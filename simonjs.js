@@ -6,8 +6,9 @@ $(document).ready(function() {
 
 var simonColor = ["blue", "red", "green", "yellow"];
 
-// var body = $("body").attr("class", "block");
-
+var simonText = $("#black").text("Simon").css("color", "white");
+simonText.css("font-size", "50pt");
+simonText.css("text-align: center");
 
 var addEventListeners = function() {
 
