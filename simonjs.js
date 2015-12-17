@@ -4,19 +4,53 @@ $(document).ready(function() {
  console.log("loaded");
 
 
-var simonColor = ["blue", "red", "green", "yellow"];
+var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 
-var simonText = $("#black").text("Simon").css("color", "white");
-simonText.css("font-size", "50pt");
+var simonText = $("#black-box").text("Simon").css("color", "white");
+simonText.css("font-size", "55pt");
 
 var addEventListeners = function() {
 
+$("#black-box").click(function() {
+	 var colorLight = (Math.round(Math.random() * (simonColor.length)));
+	 return colorLight + ("light");
+});
+
+$("#blue-box").click(function() {
+	var that = this
+	$(this).toggleClass("light");
+	setTimeout(function(){
+		$(that).removeClass("light");
+	},500);
+});
+	
+$("#red-box").click(function() {
+	var that = this
+	$(this).toggleClass("light");
+	setTimeout(function(){
+		$(that).removeClass("light");
+	},500);
+});
+
+$("#green-box").click(function() {
+	var that = this
+	$(this).toggleClass("light");
+	setTimeout(function(){
+		$(that).removeClass("light");
+	},500);
+});
+
+$("#yellow-box").click(function() {
+	var that = this
+	$(this).toggleClass("light");
+	setTimeout(function(){
+		$(that).removeClass("light");
+	},500);
+});
 
 
+};
 
-
-}
-
-
+addEventListeners();
 
 });

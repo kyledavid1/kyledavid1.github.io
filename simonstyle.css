@@ -7,24 +7,27 @@ h1 {
 	color: white;
 }
 
+h2 {
+	color: white;
+}
+
 p {
 	color: white;
 }
 
-#black {
+#black-box {
 	position: absolute;
 	background-color: black;
-	top: 300px;
+	top: 340px;
 	left: 508px;
 	width: 250px;
 	height: 250px;
-	/*border: 1px solid white;*/
 	border-radius: 50px;
 }
 
-#red {
+#red-box {
 	position: absolute;
-	top: 140px;
+	top: 180px;
 	left: 648px;
 	border: 4px solid white;
 	background-color: red;
@@ -32,12 +35,11 @@ p {
 	height: 280px;
 	float: left;
 	border-radius: 0 200px 0 0px;
-	box-shadow: 0 0 80px red;
 }
 
-#green {
+#green-box {
 	position: absolute;
-	top: 140px;
+	top: 180px;
 	left: 345px;
 	border: 4px solid white;
 	background-color: green;
@@ -45,12 +47,11 @@ p {
 	height: 280px;
 	float: left;
 	border-radius: 200px 0 0 0;
-	box-shadow: 0 0 80px green;
 }
 
-#blue {
+#blue-box {
 	position: absolute;
-	top: 442px;
+	top: 482px;
 	left: 648px;
 	border: 4px solid white;
 	background-color: blue;
@@ -58,12 +59,11 @@ p {
 	height: 280px;
 	float: left;
 	border-radius: 0 0 200px 0;
-	box-shadow: 0 0 80px blue;
 }
 
-#yellow {
+#yellow-box {
 	position: absolute;
-	top: 442px;
+	top: 482px;
 	left: 345px;
 	border: 4px solid white;
 	background-color: yellow;
@@ -71,8 +71,26 @@ p {
 	height: 280px;
 	float: left;
 	border-radius: 0 0 0 200px;
-	box-shadow: 0 0 80px yellow;
 }
+
+#red-box.light {
+	box-shadow: 0 0 120px red;
+}
+
+#green-box.light {
+	box-shadow: 0 0 150px green;
+}
+
+#blue-box.light {
+	box-shadow: 0 0 120px blue;
+}
+
+#yellow-box.light {
+	box-shadow: 0 0 120px yellow;
+}
+
+
+
 
 
 
