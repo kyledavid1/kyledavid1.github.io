@@ -74,15 +74,15 @@ p {
 }
 
 #red-box.light {
-	box-shadow: 0 0 120px red;
+	box-shadow: 0 0 170px red;
 }
 
 #green-box.light {
-	box-shadow: 0 0 150px green;
+	box-shadow: 0 0 180px green;
 }
 
 #blue-box.light {
-	box-shadow: 0 0 120px blue;
+	box-shadow: 0 0 150px blue;
 }
 
 #yellow-box.light {
