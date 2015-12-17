@@ -10,90 +10,69 @@ h1 {
 p {
 	color: white;
 }
-/*#main {
-	border: 2pt solid white;
-}*/
-div {
-	border: 2pt solid white;
-	text-align: center;
-}
 
 #black {
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	background-color: black;
-	border-radius: 45%;
-	width: 290px;
-	height: 290px;
-	margin-top: -40pt;
-	margin-left: -40pt;
+	top: 300px;
+	left: 460px;
+	width: 250px;
+	height: 250px;
+	border: 4px solid white;
+	border-radius: 45px;
 }
 
 #red {
 	position: absolute;
-	border-radius: 10%;
-	top: 50%;
-	left: 50%;
+	top: 140px;
+	left: 596px;
+	border: 4px solid white;
 	background-color: red;
-	width: 250px;
-	height: 250px;
+	width: 280px;
+	height: 280px;
 	float: left;
-	margin-top: -150px;
-	margin-right: -150px;
-	margin-left: 8.5%;
-	box-shadow: 0 0 100px red;
+	border-radius: 60px;
+	box-shadow: 0 0 80px red;
 }
 
 #green {
 	position: absolute;
+	top: 140px;
+	left: 308px;
+	border: 4px solid white;
 	background-color: green;
-	border-radius: 10%;
-	top: 50%;
-	left: 50%;
-	width: 250px;
-	height: 250px;
+	width: 280px;
+	height: 280px;
 	float: left;
-	margin-top: -150px;
-	margin-left: -150px;
-	margin-right: 9.5%;
-	margin-bottom: 10%;
-	box-shadow: 0 0 100px green;
-}
-
-#yellow {
-	position: absolute;
-	background-color: yellow;
-	border-radius: 10%;
-	top: 50%;
-	left: 50%;
-	width: 250px;
-	height: 250px;
-	float: left;
-	margin-bottom: -150px;
-	margin-left: -150px;
-	margin-right: 20%;
-	margin-top: 8.5%;
-	box-shadow: 0 0 100px yellow;
+	border-radius: 60px;
+	box-shadow: 0 0 80px green;
 }
 
 #blue {
 	position: absolute;
-	border-radius: 10%;
-	float: left;
+	top: 425px;
+	left: 596px;
+	border: 4px solid white;
 	background-color: blue;
-	top: 50%;
-	left: 50%;
-	width: 250px;
-	height: 250px;
-	margin-bottom: 150px;
-	margin-right: 150px;
-	margin-left: 8.5%;
-	margin-top: 8.5%;
-	box-shadow: 0 0 100px blue;
+	width: 280px;
+	height: 280px;
+	float: left;
+	border-radius: 60px;
+	box-shadow: 0 0 80px blue;
 }
 
-
+#yellow {
+	position: absolute;
+	top: 425px;
+	left: 308px;
+	border: 4px solid white;
+	background-color: yellow;
+	width: 280px;
+	height: 280px;
+	float: left;
+	border-radius: 60px;
+	box-shadow: 0 0 80px yellow;
+}
 
 
 
