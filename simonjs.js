@@ -11,9 +11,13 @@ simonText.css("font-size", "55pt");
 
 var addEventListeners = function() {
 
+
 $("#black-box").click(function() {
-	 var colorLight = (Math.round(Math.random() * (simonColor.length)));
-	 return colorLight + ("light");
+	var colorLight = (Math.round(Math.random() * (simonColor.length - 1)));
+	$("#" + simonColor[colorLight]).toggleClass("light");
+	setTimeout(function(){ 
+		$("#" + simonColor[colorLight]).removeClass("light");
+	},500)
 });
 
 $("#blue-box").click(function() {
