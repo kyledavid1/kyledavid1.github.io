@@ -3,18 +3,30 @@
 $(document).ready(function() {
 	console.log("loaded");
 	var sequence;
-	var level = 10;
+	var level = 1;
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
+	var simonText = $("#black-box").text("Simon").css("color", "white");
+	simonText.css("font-size", "55pt");
+	var playerClick;
+
+
+$("#black-box").click(function() {
+		newGame();
+	});
 
 	var newGame = function() {
 		sequence = [];
-		for (var i = 0; i < level; i++) {
-			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
-		}
-		playSequence();
+		var gameOver = false;
+			for (var i = 0; i < level; i++) {
+				sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
+			}
+			playSequence();
 	};
 
 	var playSequence = function() {
+		simonColor.forEach(function(color) {
+			$("#" +color).off("click");
+		})
 		sequence.forEach(function(color, index) {
 			setTimeout(function() {
 				$("#" + simonColor[color]).toggleClass("light");
@@ -27,7 +39,6 @@ $(document).ready(function() {
 	}
 
 	var activateButtons = function() {
-		alert("hey!")
 		simonColor.forEach(function(color) {
 			$("#"+color).on("click", clickHandler)
 
@@ -40,10 +51,23 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$(color).removeClass("light");
 		}, 500);
+		playerChoice();
 	}
 
-	// $("#"+color).off("click", clickHandler)
+	var playerChoice = function() {
+		playerClick = [];
+		playerClick.push($(".box"));
+		// level++
+		// for (var i = 0; i < sequence; i++) {
+		if (sequence === playerClick) {
+			alert("Winner!");
+			
+		// }
+	}
+};
 
+	// $("#"+color).off("click", clickHandler)
+	playerChoice();
 	newGame();
 
 //--------------------------------------------------------------
