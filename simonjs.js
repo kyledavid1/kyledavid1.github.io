@@ -11,7 +11,6 @@ simonText.css("font-size", "55pt");
 
 var addEventListeners = function() {
 
-
 $("#black-box").click(function() {
 	var colorLight = (Math.round(Math.random() * (simonColor.length - 1)));
 	$("#" + simonColor[colorLight]).toggleClass("light");
@@ -20,35 +19,39 @@ $("#black-box").click(function() {
 	},500)
 });
 
+
+var 
+
+
 $("#blue-box").click(function() {
-	var that = this
+	var run = this
 	$(this).toggleClass("light");
 	setTimeout(function(){
-		$(that).removeClass("light");
+		$(run).removeClass("light");
 	},500);
 });
 	
 $("#red-box").click(function() {
-	var that = this
+	var run = this
 	$(this).toggleClass("light");
 	setTimeout(function(){
-		$(that).removeClass("light");
+		$(run).removeClass("light");
 	},500);
 });
 
 $("#green-box").click(function() {
-	var that = this
+	var run = this
 	$(this).toggleClass("light");
 	setTimeout(function(){
-		$(that).removeClass("light");
+		$(run).removeClass("light");
 	},500);
 });
 
 $("#yellow-box").click(function() {
-	var that = this
+	var run = this
 	$(this).toggleClass("light");
 	setTimeout(function(){
-		$(that).removeClass("light");
+		$(run).removeClass("light");
 	},500);
 });
 
