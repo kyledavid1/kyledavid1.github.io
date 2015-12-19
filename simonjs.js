@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 	console.log("loaded");
-	var sequence;
+	var sequence=[];
 	var level = 1;
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
@@ -15,15 +15,14 @@ $("#black-box").click(function() {
 	});
 
 	var newGame = function() {
-		sequence = [];
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
 				sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
-			}
-			playSequence();
+			} level++
+			playSequence(level);
 	};
 
-	var playSequence = function() {
+	var playSequence = function(currentLevel) {
 		simonColor.forEach(function(color) {
 			$("#" +color).off("click");
 		});
@@ -40,34 +39,49 @@ $("#black-box").click(function() {
 
 	var activateButtons = function() {
 		simonColor.forEach(function(color) {
-			$("#"+color).on("click", clickHandler)
-
+			$("#"+color).on("click", clickHandler);
 		});
 	};
 
-	var playerChoice = function() {
-		playerClick = [];
-		$("#").on("click", ".box", clickHandler) ;
-			playerClick.push($("#"));
-		if (sequence === playerClick) {
-			alert("Winner!");
-		}
-	}
+	// $('.box').click(function() {
+	// 		var playerChoice = this.id
+	// 		level++
+	// 	});
+
+var playerChoice = function(choice) {
+	// playerClick = [];
+	$(choice).click(function() {
+		// var button = $("#").on("click", "box", clickHandler);
+		// 	for (var i = 0; i < playerClick; i++) {
+		// 		playerClick.push();
+		// 	if (sequence === playerClick) {
+		// 		sequence.shift();
+		// 	alert("Winner!");
+		// 	} 
+		// }
+		// for (var i = 0; i < level; i++) {
+		// 		playerClick.push($(choice).attr("id"));
+		// 	} 
+		activateButtons();
+	});
+}	
 
 	var clickHandler = function() {
 		var color = this
 		$(this).toggleClass("light");
 		setTimeout(function() {
 			$(color).removeClass("light");
-		}, 500);
-		playerChoice();
-		level++
+			playerChoice(this);
+		}, 500); 
+		// setTimeout(function() {
+			// newGame();
+		// },1000)
 	};
 // make it so that when you click the correct color, 
 // you advance to the next level.
 
 });
-
+// sequence.shift();
 	// $("#"+color).off("click", clickHandler)
 	// newGame();
 
