@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 	console.log("loaded");
-	var sequence=[];
+	var sequence;
 	var level = 1;
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
@@ -15,14 +15,15 @@ $("#black-box").click(function() {
 	});
 
 	var newGame = function() {
+		sequence = [];
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
 				sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
 			} level++
-			playSequence(level);
+			playSequence();
 	};
 
-	var playSequence = function(currentLevel) {
+	var playSequence = function() {
 		simonColor.forEach(function(color) {
 			$("#" +color).off("click");
 		});
@@ -39,7 +40,7 @@ $("#black-box").click(function() {
 
 	var activateButtons = function() {
 		simonColor.forEach(function(color) {
-			$("#"+color).on("click", clickHandler);
+			$("#" +color).on("click", clickHandler);
 		});
 	};
 
@@ -48,9 +49,8 @@ $("#black-box").click(function() {
 	// 		level++
 	// 	});
 
-var playerChoice = function(choice) {
-	// playerClick = [];
-	$(choice).click(function() {
+var playerChoice = function() {
+	$("#").click(function() {
 		// var button = $("#").on("click", "box", clickHandler);
 		// 	for (var i = 0; i < playerClick; i++) {
 		// 		playerClick.push();
@@ -73,15 +73,13 @@ var playerChoice = function(choice) {
 			$(color).removeClass("light");
 			playerChoice(this);
 		}, 500); 
-		// setTimeout(function() {
-			// newGame();
-		// },1000)
+		
 	};
 // make it so that when you click the correct color, 
 // you advance to the next level.
 
 });
-// sequence.shift();
+// sequence.shift(); compare sequence.shift with playerChoice?
 	// $("#"+color).off("click", clickHandler)
 	// newGame();
 
