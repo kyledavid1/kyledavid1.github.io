@@ -8,9 +8,10 @@ $(document).ready(function() {
 	var simonText = $("#black-box").text("Simon").css("color", "white");
 	simonText.css("font-size", "55pt");
 
-
 $("#black-box").click(function() {
+		level = 1;
 		newGame();
+		simonText.text("Simon");
 	});
 
 	var newGame = function() {
@@ -53,8 +54,6 @@ $("#black-box").click(function() {
 		var correctSequence = sequence.shift();
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
-				// var newSequence = [];
-				// console.log(newSequence.push(sequence));
 			setTimeout(function() {
 				level++
 				newGame();
@@ -62,7 +61,7 @@ $("#black-box").click(function() {
 		}	
 				} else {
 					$(".box").off("click");
-				simonText.text("You lose");
+				simonText.text("You Lost!");
 				level = 1;
 				newGame();
 			}	
@@ -72,11 +71,15 @@ $("#black-box").click(function() {
 var playerWins = function() {
 	if (level > 5) {
 		if (sequence.length === 0) {
+			$(".box").off("click");
 		alert("Congratulations, YOU WON");
 		simonText.text("YOU WON!");
+		level = 1;
+		newGame();
 		}
-	}
+	}	
 }
+
 });
 
 // - Increment `level` only when the user finishes the sequence 
