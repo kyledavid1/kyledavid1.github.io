@@ -11,7 +11,7 @@ $(document).ready(function() {
 $("#black-box").click(function() {
 		level = 1;
 		newGame();
-		simonText.text("Simon " +levels);
+		simonText.text("Simon");
 	});
 
 	var newGame = function() {
@@ -19,6 +19,7 @@ $("#black-box").click(function() {
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
 			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
+
 			} 
 			
 			playSequence();
@@ -52,11 +53,11 @@ $("#black-box").click(function() {
 			$(color).removeClass("light");
 		}, 700); 
 		var correctSequence = sequence.shift();
-		// var correctSequence = color.id;
+		
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
-				// sequenceArray[]
+				
 				level++
 				newGame();
 			}, 2000)
@@ -83,6 +84,7 @@ var playerWins = function() {
 }
 
 });
+
 
 // - Increment `level` only when the user finishes the sequence 
 // (when there are no colors left to click on)
