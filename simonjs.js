@@ -51,15 +51,16 @@ $("#black-box").click(function() {
 			$(color).removeClass("light");
 		}, 700); 
 		var correctSequence = sequence.shift();
-		if (simonColor[correctSequence] === this.id) {
+		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
-				var newSequence = [];
-				console.log(newSequence.push(sequence));
+				// var newSequence = [];
+				// console.log(newSequence.push(sequence));
 			setTimeout(function() {
 				level++
 				newGame();
 			}, 2000)
 		}
+	
 				} else {
 					$(".box").off("click");
 				simonText.text("Game Over");
@@ -67,7 +68,16 @@ $("#black-box").click(function() {
 				newGame();
 			
 			}	
+	};
+		
+var playerWins = function() {
+	while (sequence < 2) {
+		alert("Congratulations, YOU WON");
+		simonText.text("YOU WON!");
 	}
+}
+
+playerWins();
 
 });
 
