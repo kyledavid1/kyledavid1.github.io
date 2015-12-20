@@ -7,7 +7,6 @@ $(document).ready(function() {
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
 	simonText.css("font-size", "55pt");
-	var playerClick;
 
 
 $("#black-box").click(function() {
@@ -19,7 +18,8 @@ $("#black-box").click(function() {
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
 				sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
-			} level++
+			} 
+			
 			playSequence();
 	};
 
@@ -44,44 +44,67 @@ $("#black-box").click(function() {
 		});
 	};
 
-	// $('.box').click(function() {
-	// 		var playerChoice = this.id
-	// 		level++
-	// 	});
-
-var playerChoice = function() {
-	$("#").click(function() {
-		// var button = $("#").on("click", "box", clickHandler);
-		// 	for (var i = 0; i < playerClick; i++) {
-		// 		playerClick.push();
-		// 	if (sequence === playerClick) {
-		// 		sequence.shift();
-		// 	alert("Winner!");
-		// 	} 
-		// }
-		// for (var i = 0; i < level; i++) {
-		// 		playerClick.push($(choice).attr("id"));
-		// 	} 
-		activateButtons();
-	});
-}	
-
 	var clickHandler = function() {
 		var color = this
 		$(this).toggleClass("light");
 		setTimeout(function() {
 			$(color).removeClass("light");
-			playerChoice(this);
-		}, 500); 
-		
-	};
-// make it so that when you click the correct color, 
-// you advance to the next level.
+		}, 700); 
+		var correctSequence = sequence.shift();
+		if (simonColor[correctSequence] === this.id) {
+			if (sequence.length === 0) {
+				var newSequence = [];
+				console.log(newSequence.push(sequence));
+			setTimeout(function() {
+				level++
+				newGame();
+			}, 2000)
+		}
+				} else {
+					$(".box").off("click");
+				simonText.text("Game Over");
+				level = 1;
+				newGame();
+			
+			}	
+	}
 
 });
-// sequence.shift(); compare sequence.shift with playerChoice?
-	// $("#"+color).off("click", clickHandler)
-	// newGame();
+
+// - Increment `level` only when the user finishes the sequence 
+// (when there are no colors left to click on)
+// - Use `var correctColor = sequence.shift()` to remove the 
+// first element from the sequence, then use that to compare 
+// with the one they clicked on
+// - If they clicked on the right one, then check if the sequence is empty.  
+// If it is, do `level++` in `newGame()` to advance and generate 
+// a new sequence with 1 extra color
+
+
+
+// assuming a scenario where a player is on level 4 and 
+// he has 4 colors in his sequence.
+// level === 4
+// sequence === [1,3,2,4]
+// var correctButton = sequence.shift();
+// Now sequence === [3,2,4] and correctButton === 1
+// if (simonColor[correctButton] == theClickedButton.id) {
+  // then we need to check if they have completed the sequence
+  // if (sequence.length == 0)  {
+    // okay, there are no more colors left to click on, 
+    // so lets start the next level
+    // level++;
+    // newGame();
+  // }
+// }
+// } else {  // the player clicked the wrong button
+  // alert('You lose!');
+  // level = 1;
+  // newGame();
+
+  // That's the logic you need to encode in JS.  
+  // What I wrote won't work as-is, you need to read through it, 
+  // and see how the logic works and adapt it to your program.
 
 //--------------------------------------------------------------
 
