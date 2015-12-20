@@ -59,26 +59,24 @@ $("#black-box").click(function() {
 				level++
 				newGame();
 			}, 2000)
-		}
-	
+		}	
 				} else {
 					$(".box").off("click");
-				simonText.text("Game Over");
+				simonText.text("You lose");
 				level = 1;
 				newGame();
-			
 			}	
-	};
+			playerWins();
+	};	
 		
 var playerWins = function() {
-	while (sequence < 2) {
+	if (level > 5) {
+		if (sequence.length === 0) {
 		alert("Congratulations, YOU WON");
 		simonText.text("YOU WON!");
+		}
 	}
 }
-
-playerWins();
-
 });
 
 // - Increment `level` only when the user finishes the sequence 
