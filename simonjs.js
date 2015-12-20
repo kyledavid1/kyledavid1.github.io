@@ -11,14 +11,14 @@ $(document).ready(function() {
 $("#black-box").click(function() {
 		level = 1;
 		newGame();
-		simonText.text("Simon");
+		simonText.text("Simon " +levels);
 	});
 
 	var newGame = function() {
 		sequence = [];
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
-				sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
+			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
 			} 
 			
 			playSequence();
@@ -52,9 +52,11 @@ $("#black-box").click(function() {
 			$(color).removeClass("light");
 		}, 700); 
 		var correctSequence = sequence.shift();
+		// var correctSequence = color.id;
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
+				// sequenceArray[]
 				level++
 				newGame();
 			}, 2000)
