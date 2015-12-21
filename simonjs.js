@@ -57,7 +57,7 @@ $("#black-box").click(function() {
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
-			
+			simonText.text("Level "+level);
 				level++
 				newGame();
 			}, 2000)

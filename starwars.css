@@ -4,6 +4,8 @@ body {
 
 button {
 	background-color: black;
+	margin-left: 500px;
+	margin-top: 200px;
 }
 
 a {
@@ -42,7 +44,7 @@ a {
 #galaxycontent {
 	position: absolute;
 	top: 100%;
-	animation: scroll 100s linear 4s infinite;
+	animation: scroll 100s linear .5s infinite;
 }
 
 @keyframes scroll {

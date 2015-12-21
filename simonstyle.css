@@ -1,6 +1,8 @@
 body {
 	background-color: #111;
 	text-align: center;
+	background-image: url("random/calm.jpg");
+	background-size: cover;
 }
 
 h1 {
