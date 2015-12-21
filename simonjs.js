@@ -74,6 +74,7 @@ $("#black-box").click(function() {
 var playerWins = function() {
 	if (level > 10) {
 		if (sequence.length === 0) {
+		alert("CONGRATS! YOU WON");
 		simonText.text("YOU WON!");
 		$("#").off("click");
 			level = 1;
