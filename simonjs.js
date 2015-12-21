@@ -51,13 +51,13 @@ $("#black-box").click(function() {
 		$(this).toggleClass("light");
 		setTimeout(function() {
 			$(color).removeClass("light");
-		}, 700); 
+		}, 500); 
 		var correctSequence = sequence.shift();
 		
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
-				
+			
 				level++
 				newGame();
 			}, 2000)
@@ -69,6 +69,7 @@ $("#black-box").click(function() {
 				newGame();
 			}	
 			playerWins();
+			// mySound.play();
 	};	
 		
 var playerWins = function() {
@@ -82,6 +83,9 @@ var playerWins = function() {
 		}
 	}	
 }
+
+// var mySound = newAudio('Indiana.mp3');
+
 
 });
 
