@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var level = 1;
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
-	simonText.css("font-size", "55pt");
+	simonText.css("font-size", "50pt");
 
 $("#black-box").click(function() {
 		level = 1;
@@ -19,7 +19,6 @@ $("#black-box").click(function() {
 		var gameOver = false;
 			for (var i = 0; i < level; i++) {
 			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
-
 			} 
 			
 			playSequence();
@@ -53,11 +52,11 @@ $("#black-box").click(function() {
 			$(color).removeClass("light");
 		}, 500); 
 		var correctSequence = sequence.shift();
-		
+	
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
-			simonText.text("Level "+level);
+				simonText.text("Level "+level);
 				level++
 				newGame();
 			}, 2000)
