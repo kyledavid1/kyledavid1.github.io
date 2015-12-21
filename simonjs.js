@@ -52,7 +52,7 @@ $("#black-box").click(function() {
 			$(color).removeClass("light");
 		}, 500); 
 		var correctSequence = sequence.shift();
-	
+		
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
 			setTimeout(function() {
@@ -60,9 +60,9 @@ $("#black-box").click(function() {
 				level++
 				newGame();
 			}, 2000)
-		}	
+		}
 				} else {
-					$(".box").off("click");
+				$("#").off("click");
 				simonText.text("You Lost!");
 				level = 1;
 				newGame();
@@ -74,13 +74,17 @@ $("#black-box").click(function() {
 var playerWins = function() {
 	if (level > 5) {
 		if (sequence.length === 0) {
-			$(".box").off("click");
-		alert("Congratulations, YOU WON");
 		simonText.text("YOU WON!");
-		level = 1;
+		$("#").off("click");
+			level = 1;
 		newGame();
 		}
 	}	
+	endGame();
+}
+
+var endGame = function() {
+	clickHandler.off("click");
 }
 
 // var mySound = newAudio('Indiana.mp3');
