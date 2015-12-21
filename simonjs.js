@@ -72,7 +72,7 @@ $("#black-box").click(function() {
 	};	
 		
 var playerWins = function() {
-	if (level > 5) {
+	if (level > 10) {
 		if (sequence.length === 0) {
 		simonText.text("YOU WON!");
 		$("#").off("click");
