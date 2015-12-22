@@ -63,7 +63,7 @@ $("#black-box").click(function() {
 		}
 				} else {
 				$("#").off("click");
-				simonText.text("You Lost!");
+				simonText.text("You Lost! Restart");
 				level = 1;
 				newGame();
 			}	
