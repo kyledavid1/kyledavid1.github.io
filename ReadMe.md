@@ -6,7 +6,7 @@
 
 
 ##Copyrights and Credits
-*Note, I do not own the images displayed in this game and such images are subject to copyright by the author/owner/sole proprietor of the images used.* 
+*Please note, the text displayed within the intro are various quotes from the movie Monty Python and the Holy Grail. I do not take credit, but instead give credit to the writers of the movie.* 
 
 *Furthermore, I give credit to the creators of the Simon Game. I, in no way, own the rights to this game and give full accreditation to Milton Bradley, as well as, the owners/authors/sole proprietors.* 
 
