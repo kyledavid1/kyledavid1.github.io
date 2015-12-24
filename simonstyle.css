@@ -1,5 +1,5 @@
 body {
-	background-color: #F0FFFF;
+	background-color: #FFFAF0;
 	text-align: center;
 }
 
@@ -83,11 +83,11 @@ h2 {
 }
 
 #blue-box.light {
-	box-shadow: 0 0 180px blue;
+	box-shadow: 0 0 200px blue;
 }
 
 #yellow-box.light {
-	box-shadow: 0 0 150px yellow;
+	box-shadow: 0 0 180px yellow;
 }
 
 
