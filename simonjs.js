@@ -26,6 +26,7 @@ $("#black-box").click(function() {
 			playSequence();
 	};
 
+	// This plays the sequence and advances to the next level when the proper sequence has been selected. In simonColor.forEach The '#'' is calling the id of the boxes +the color and turning the click off for the duration the sequence is being played. The sequence.forEach is taking in the color and the index of that color(0, 1, 2..etc.) and playing that sequence for a duration of 700, miliseconds. In other words, it's lighting up the color for that time. The second timeout function is taking the index and * it by 1 second. I do this because as the sequence gets longer, I'm giving it more time to play the sequence out and making sure the user is unable to click while the sequence is being played. activateButtons is then allowing the user to click the sequence and is also giving the user enough time to click the proper sequence.
 	var playSequence = function() {
 		simonColor.forEach(function(color) {
 			$("#" +color).off("click");
@@ -41,12 +42,14 @@ $("#black-box").click(function() {
 		setTimeout(activateButtons, level * 1000)
 	};
 
+	// Activating the click function so the user can then click, but only after the sequence has been played in full.
 	var activateButtons = function() {
 		simonColor.forEach(function(color) {
 			$("#" +color).on("click", clickHandler);
 		});
 	};
 
+	// This is allowing the click functionality for the game. Once clicked the colors will light up for half a second. If the correct sequence is clicked you will advance to the next level via the level++ and the newGame function allows an entirely new sequence to be played as well. The if statement is also checking to make sure the user has clicked everything in that sequence and if they have then advance to the next level. If not the game will wait until the user has clicked everything in the sequence. Sequence.shift is shifting the first color off, comparing it to the color just clicked then checking for the next color clicked. 
 	var clickHandler = function() {
 		var color = this
 		$(this).toggleClass("light");
@@ -73,6 +76,7 @@ $("#black-box").click(function() {
 			// mySound.play();
 	};	
 		
+		// This is stating that the player will win if they reach level 10 and will display a message within the black box. However, this function will keep playing after the user has reached level 10. I need to make the game display the message and stop playing the sequence after that level has been reached. 
 var playerWins = function() {
 	if (level > 10) {
 		if (sequence.length === 0) {

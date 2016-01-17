@@ -90,7 +90,48 @@ h2 {
 	box-shadow: 0 0 180px yellow;
 }
 
+/*ipad res*/
+@media screen and (max-width: 768px) {
+	h1 {
+		width: 36%;
+	}
+	h2 {
+		width: 36%;
+	}
+	/*I want to move the div's in accordance to the screen size. May have to use js instead of css selectors.*/
+	div {
+		margin: 0 auto;
+	}
 
+	/*#black-box {
+		margin: 0 auto;
+	}
+	#red-box {
+		margin: 0 auto;
+	}
+	#green-box {
+		margin: 0 auto;
+	}
+	#blue-box {
+		margin: 0 auto;
+	}
+	#yellow-box {
+		margin: 0 auto;
+	}*/
+  body {
+     background-color: #FFFAF0;
+    }
+}
+
+/*iphone 6*/
+@media screen and (max-width: 376px) {
+	p {
+		width: 80%;
+	}
+  body {
+        background-color: #FFFAF0;
+    }
+}
 
 
 
