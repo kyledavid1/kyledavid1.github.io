@@ -16,6 +16,11 @@ h2 {
 	text-align: center;
 }
 
+div {
+	animation: bounceIn 4s;
+	animation: bounceOut 4s;
+}
+
 #black-box {
 	position: absolute;
 	background-color: black;
@@ -100,7 +105,7 @@ h2 {
 	}
 	/*I want to move the div's in accordance to the screen size. May have to use js instead of css selectors.*/
 	div {
-		margin: 0 auto;
+		width: 280px;
 	}
 
 	/*#black-box {
@@ -125,6 +130,9 @@ h2 {
 
 /*iphone 6*/
 @media screen and (max-width: 376px) {
+	div {
+		width: 35%
+	}
 	p {
 		width: 80%;
 	}
@@ -133,7 +141,34 @@ h2 {
     }
 }
 
+@keyframes bounceIn {
+	0% {
+		transform: scale (0);
+		opacity: 0;
+	}
+	50% {
+		transform: scale (1);
+		opacity: 2;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
 
+@keyframes bounceOut {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1);
+		opacity: 2;
+	}
+	100% {
+		transform: scale (.5);
+	}
+
+}
 
 
 
