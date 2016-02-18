@@ -3,10 +3,9 @@ body {
 }
 
 button {
-	position: absolute;
+	margin-top: 100px;
+	position: relative;
 	background-color: black;
-	top: 100px;
-	right: 200px;
 }
 
 a {

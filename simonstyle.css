@@ -21,6 +21,8 @@ div {
 	animation: bounceOut 4s;
 }
 
+
+
 #black-box {
 	position: absolute;
 	background-color: black;
@@ -95,34 +97,33 @@ div {
 	box-shadow: 0 0 180px yellow;
 }
 
+/*centers the divs in mobile, but not on web. When I comment out left -15 it centers on web, but not on mobile.*/
+.container {
+	position: relative;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	width: 100%;
+	left: -15%;
+}
+
 /*ipad res*/
 @media screen and (max-width: 768px) {
+	
+div .container {
+	position: relative;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	width: 100%;
+	left: -15%;
+}
+
 	h1 {
 		width: 36%;
 	}
 	h2 {
 		width: 36%;
 	}
-	/*I want to move the div's in accordance to the screen size. May have to use js instead of css selectors.*/
-	div {
-		width: 280px;
-	}
 
-	/*#black-box {
-		margin: 0 auto;
-	}
-	#red-box {
-		margin: 0 auto;
-	}
-	#green-box {
-		margin: 0 auto;
-	}
-	#blue-box {
-		margin: 0 auto;
-	}
-	#yellow-box {
-		margin: 0 auto;
-	}*/
   body {
      background-color: #FFFAF0;
     }
@@ -130,9 +131,15 @@ div {
 
 /*iphone 6*/
 @media screen and (max-width: 376px) {
-	div {
-		width: 35%
-	}
+	div .container {
+	position: relative;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	width: 100%;
+	left: -15%;
+
+}
+
 	p {
 		width: 80%;
 	}
