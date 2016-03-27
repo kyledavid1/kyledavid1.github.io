@@ -22,7 +22,6 @@ $("#black-box").click(function() {
 			for (var i = 0; i < level; i++) {
 			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
 			} 
-			
 			playSequence();
 	};
 
@@ -73,7 +72,6 @@ $("#black-box").click(function() {
 				newGame();
 			}	
 			playerWins();
-			// mySound.play();
 	};	
 		
 		// This is stating that the player will win if they reach level 10 and will display a message within the black box. However, this function will keep playing after the user has reached level 10. I need to make the game display the message and stop playing the sequence after that level has been reached. 
@@ -84,6 +82,7 @@ var playerWins = function() {
 		simonText.text("YOU WON!");
 		$("#").off("click");
 			level = 1;
+			// mySound.play();
 		newGame();
 		}
 	}	
@@ -94,7 +93,7 @@ var endGame = function() {
 	clickHandler.off("click");
 }
 
-// var mySound = newAudio('Indiana.mp3');
+// var mySound = new Audio('Indiana.mp3');
 
 
 });
