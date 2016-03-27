@@ -6,6 +6,7 @@ button {
 	margin-top: 100px;
 	position: relative;
 	background-color: black;
+	border: 2px solid white;
 }
 
 a {
@@ -52,18 +53,36 @@ a {
 	100% { top: -170%; }
 }
 
+/*##########################################*/
+						/*Media Queries*/
+/*##########################################*/
 /*iPhone 6*/
-@media screen and (max-width: 376px) {
-	/*button {
-		width: 80%;
+@media screen and (max-width: 500px) {
+	
+	button {
+		margin-top: 100px;
 	}
-	a {
-		width: 100%;
-	}*/
+
 	p {
-		width: 30%;
+		padding-left: 50px;
+		padding-right: 50px;
+
 	}
-  body {
-        background-color: #FFFAF0;
-    }
+
+	#galaxy {
+		bottom: 0;
+	}
+
+	#galaxycontent {
+		padding: 220px;
+
+	}
 }
+
+
+
+
+
+
+
+
