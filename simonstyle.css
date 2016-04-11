@@ -142,57 +142,57 @@ div {
 	#black-box {
 		position: absolute;
 		background-color: black;
-		top: 176px;
-    left: 176px;
-    width: 230px;
-    height: 230px;
+		top: 192px;
+    left: 165px;
+    width: 220px;
+    height: 220px;
 		border-radius: 50px;
 	}
 
 	#red-box {
 		position: absolute;
-		top: 30px;
-		left: 290px;
-		border: 5px solid black;
-		background-color: red;
-		width: 250px;
-    height: 250px;
+		top: 60px;
+    left: 280px;
+    border: 5px solid black;
+    background-color: red;
+    width: 230px;
+    height: 230px;
 		float: left;
 		border-radius: 0 200px 0 0px;
 	}
 
 	#green-box {
 		position: absolute;
-		top: 30px;
-		left: 30px;
+		top: 60px;
+    left: 40px;
 		border: 5px solid black;
 		background-color: green;
-		width: 250px;
-		height: 250px;
+		width: 230px;
+		height: 230px;
 		float: left;
 		border-radius: 200px 0 0 0;
 	}
 
 	#blue-box {
 		position: absolute;
-		top: 290px;
-		left: 290px;
+		top: 299px;
+    left: 280px;
 		border: 5px solid black;
 		background-color: blue;
-		width: 250px;
-		height: 250px;
+		width: 230px;
+    height: 230px;
 		float: left;
 		border-radius: 0 0 200px 0;
 	}
 
 	#yellow-box {
 		position: absolute;
-		top: 290px;
-		left: 30px;
+		top: 299px;
+    left: 40px;
 		border: 5px solid black;
 		background-color: yellow;
-		width: 250px;
-		height: 250px;
+		width: 230px;
+		height: 230px;
 		float: left;
 		border-radius: 0 0 0 200px;
 	}
@@ -200,8 +200,9 @@ div {
 	.container {
 		position: relative;
 	  display: inline-block;
-	  width: 590px;
-	  height: 575px;
+	  width: 560px;
+    height: 545px;
+    padding-bottom: 50px;
 	}
 }
 

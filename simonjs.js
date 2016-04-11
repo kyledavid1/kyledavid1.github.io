@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var level = 1;
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
-	simonText.css("font-size", "50pt");
+	simonText.css("font-size", "45pt");
 
 // Allows you to click on the black box to start and restart a game. Level always starts at 1.
 $("#black-box").click(function() { 
