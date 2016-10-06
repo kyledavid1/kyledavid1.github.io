@@ -9,11 +9,11 @@ $(document).ready(function() {
 	simonText.css("font-size", "45pt");
 
 // Allows you to click on the black box to start and restart a game. Level always starts at 1.
-$("#black-box").click(function() { 
-		level = 1;
-		newGame();
-		simonText.text("Simon");
-	});
+  $("#black-box").click(function() { 
+    level = 1;
+    newGame();
+    simonText.text("Simon");
+  });
 
 	// newGame starts the sequence. I'm utilizing a for loop to push a random number from the simonColor variable into the empty sequence array. The reason for generating a random number is because simonColor is an array with the values 0 - 3. These values correlate directly with the 4 colors in simonColor. Math.round is rounding the number to a whole number because Math.random generates a number between 0 and 1 (0.344) which is why I multiply it by simonColor as simonColor has 4 colors in it. However, arrays start counting at 0, whcih means, in array standards, simonColor has 0, 1, 2, 3 values(colors) within it and that is why I subtract 1 from simonColor.length. Then I call playSequence, so the computer plays the randomly generated sequence to the player.
 	var newGame = function() {
@@ -75,23 +75,23 @@ $("#black-box").click(function() {
 	};	
 		
 		// This is stating that the player will win if they reach level 10 and will display a message within the black box. However, this function will keep playing after the user has reached level 10. I need to make the game display the message and stop playing the sequence after that level has been reached. 
-var playerWins = function() {
-	if (level > 10) {
-		if (sequence.length === 0) {
-      alert("CONGRATS! YOU WON");
-      simonText.text("YOU WON!");
-      $("#").off("click");
-        level = 1;
-        // mySound.play();
-      newGame();
-		}
-	}	
-	endGame();
-}
+  var playerWins = function() {
+    if (level > 10) {
+      if (sequence.length === 0) {
+        alert("CONGRATS! YOU WON");
+        simonText.text("YOU WON!");
+        $("#").off("click");
+          level = 1;
+          // mySound.play();
+        newGame();
+      }
+    }	
+    endGame();
+  }
 
-var endGame = function() {
-	clickHandler.off("click");
-}
+  var endGame = function() {
+    clickHandler.off("click");
+  }
 
 // var mySound = new Audio('Indiana.mp3');
 
