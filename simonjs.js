@@ -19,10 +19,10 @@ $("#black-box").click(function() {
 	var newGame = function() {
 		sequence = [];
 		var gameOver = false;
-			for (var i = 0; i < level; i++) {
-			sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
-			} 
-			playSequence();
+    for (var i = 0; i < level; i++) {
+      sequence.push(Math.round(Math.random() * (simonColor.length - 1)));
+    } 
+    playSequence();
 	};
 
 	// This plays the sequence and advances to the next level when the proper sequence has been selected. In simonColor.forEach The '#'' is calling the id of the boxes +the color and turning the click off for the duration the sequence is being played. The sequence.forEach is taking in the color and the index of that color(0, 1, 2..etc.) and playing that sequence for a duration of 700, miliseconds. In other words, it's lighting up the color for that time. The second timeout function is taking the index and * it by 1 second. I do this because as the sequence gets longer, I'm giving it more time to play the sequence out and making sure the user is unable to click while the sequence is being played. activateButtons is then allowing the user to click the sequence and is also giving the user enough time to click the proper sequence.
@@ -33,10 +33,10 @@ $("#black-box").click(function() {
 		sequence.forEach(function(color, index) {
 			setTimeout(function() {
 				$("#" + simonColor[color]).toggleClass("light");
-				setTimeout(function() {
-					$("#" + simonColor[color]).removeClass("light");
-				}, 700)
-			}, index * 1000)
+          setTimeout(function() {
+            $("#" + simonColor[color]).removeClass("light");
+          }, 700)
+      }, index * 1000)
 		});
 		setTimeout(activateButtons, level * 1000)
 	};
@@ -55,22 +55,22 @@ $("#black-box").click(function() {
 		setTimeout(function() {
 			$(color).removeClass("light");
 		}, 500); 
+
 		var correctSequence = sequence.shift();
-		
 		if (simonColor[correctSequence] === color.id) {
 			if (sequence.length === 0) {
-			setTimeout(function() {
-				simonText.text("Level "+level);
-				level++
-				newGame();
-			}, 2000)
-		}
-				} else {
-				$("#").off("click");
-				simonText.text("You Lost! Restart");
-				level = 1;
-				newGame();
-			}	
+        setTimeout(function() {
+          simonText.text("Level "+level);
+          level++
+          newGame();
+        }, 2000)
+      }
+    } else {
+      $("#").off("click");
+      simonText.text("You Lost! Restart");
+      level = 1;
+      newGame();
+    }	
 			playerWins();
 	};	
 		
@@ -78,12 +78,12 @@ $("#black-box").click(function() {
 var playerWins = function() {
 	if (level > 10) {
 		if (sequence.length === 0) {
-		alert("CONGRATS! YOU WON");
-		simonText.text("YOU WON!");
-		$("#").off("click");
-			level = 1;
-			// mySound.play();
-		newGame();
+      alert("CONGRATS! YOU WON");
+      simonText.text("YOU WON!");
+      $("#").off("click");
+        level = 1;
+        // mySound.play();
+      newGame();
 		}
 	}	
 	endGame();
