@@ -7,6 +7,10 @@ $(document).ready(function() {
 	var simonColor = ["blue-box", "red-box", "green-box", "yellow-box"];
 	var simonText = $("#black-box").text("Simon").css("color", "white");
 	simonText.css("font-size", "45pt");
+  var buttonBeep = new Audio();
+  buttonBeep.src = "random/lightBeep.mp3";
+  var wrongBeep = new Audio();
+  wrongBeep.src = "random/beep-03.mp3";
 
 // Allows you to click on the black box to start and restart a game. Level always starts at 1.
   $("#black-box").click(function() { 
@@ -33,6 +37,7 @@ $(document).ready(function() {
 		sequence.forEach(function(color, index) {
 			setTimeout(function() {
 				$("#" + simonColor[color]).toggleClass("light");
+          buttonBeep.play();
           setTimeout(function() {
             $("#" + simonColor[color]).removeClass("light");
           }, 700)
@@ -52,6 +57,7 @@ $(document).ready(function() {
 	var clickHandler = function() {
 		var color = this
 		$(this).toggleClass("light");
+    buttonBeep.play();
 		setTimeout(function() {
 			$(color).removeClass("light");
 		}, 500); 
@@ -68,6 +74,7 @@ $(document).ready(function() {
     } else {
       $("#").off("click");
       simonText.text("You Lost! Restart");
+      wrongBeep.play();
       level = 1;
       newGame();
     }	
