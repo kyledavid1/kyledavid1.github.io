@@ -26,7 +26,7 @@ a {
 	margin-left: -9em;
 	font-size: 350%;
 	font-weight: bold;
-	text-align: justify;
+	text-align: center;
 	overflow: hidden;
 	transform-origin: 50% 100%;
 	transform: perspective(300px) rotateX(15deg);
@@ -58,25 +58,22 @@ a {
 /*##########################################*/
 /*iPhone 6*/
 @media screen and (max-width: 500px) {
-	
-	button {
-		margin-top: 100px;
-	}
 
 	p {
 		padding-left: 50px;
 		padding-right: 50px;
-
 	}
 
+  /* moves text too far to the right, but prevents swiping right */
 	#galaxy {
-		bottom: 0;
+    margin-left: 0em;
+    width: 0em;
 	}
 
-	#galaxycontent {
-		padding: 220px;
-
-	}
+  #galaxycontent {
+		padding-left: 150px;
+		padding-right: 150px;
+  }
 }
 
 
