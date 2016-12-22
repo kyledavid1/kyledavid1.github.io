@@ -64,9 +64,11 @@ a {
 		padding-right: 50px;
 	}
 
-  /* moves text too far to the right, but prevents swiping right */
+  /* moves text too far to the right, but prevents swiping right
 	#galaxy {
-	}
+    width: 0em;
+    margin-left: 0px;
+	}*/
 
   #galaxycontent {
 		padding-left: 200px;
