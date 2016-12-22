@@ -66,20 +66,10 @@ a {
 
   /* moves text too far to the right, but prevents swiping right */
 	#galaxy {
-    margin-left: 0em;
-    width: 0em;
 	}
 
   #galaxycontent {
-		padding-left: 150px;
-		padding-right: 150px;
+		padding-left: 200px;
+		padding-right: 200px;
   }
 }
-
-
-
-
-
-
-
-
